@@ -3,7 +3,17 @@
         {{- $currentPage := . -}}
         {{ range sort .Site.Menus.main ".Identifier" -}}
             <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
-        {{- end }}
+        {{- end }}        
+        {{ if .Site.Params.footer.rss }}
+            <li><a href="{{ "feed.xml" | absLangURL }}" target="_blank" title="rss"><svg width="18" height="18" viewBox="-10 -5 1034 1034" fill="currentColor" class="feather" xmlns="http://www.w3.org/2000/svg"><path d="M75 175v170q135 0 260 52t220.5 147.5t147.5 220.5t52 260h170q0 -169 -64.5 -325t-184.5 -275.5t-276 -184.5t-325 -65zM75 462v165q79 0 152.5 30.5t129.5 86.5t86 129t30 152h165q0 -112 -42.5 -215.5t-122 -182.5t-183 -122t-215.5 -43zM192 792q-32 0 -59 16
+            t-42.5 42.5t-15.5 58.5t15.5 58.5t42.5 42t58.5 15.5t58.5 -15.5t42.5 -42t15.5 -58.5t-15.5 -58.5t-42.5 -42.5t-58 -16z" /></svg></a></li>
+        {{ end }}      
+        {{ if .Site.Params.footer.json }}
+            <li><a href="{{ "feed.json" | absLangURL }}" target="_blank" title="jsonfeed"><svg width="18" height="18" viewBox="-10 -5 1034 1034" fill="currentColor" class="feather" xmlns="http://www.w3.org/2000/svg"><path d="M854 175q-27 0 -46 19t-19 45.5t18.5 45t45 18.5t45.5 -18.5t19 -45t-18.5 -45.5t-44.5 -19zM205 192l-34 34q-83 83 -88 154t68 144l82 82q45 46 48.5 78t-33.5 69v0q-16 19 -15.5 44.5t18.5 43.5t43.5 18.5t44.5 -15.5l1 1q25 -25 47 -32t45.5 4.5t53.5 41.5l95 96
+              q75 74 147.5 70t155.5 -87l33 -34l-71 -72l-18 18q-47 47 -84 47.5t-82 -44.5l-112 -112q-86 -86 -169 -17l-11 -11q35 -42 31.5 -83t-45.5 -82l-100 -101q-31 -31 -40.5 -56.5t1 -51.5t42.5 -59l17 -17zM703 326q-28 0 -46.5 19t-18.5 45.5t18.5 45.5t45 19t45.5 -19
+              t19 -45.5t-18.5 -45t-44.5 -19.5zM551 477q-27 0 -46 19t-19 45.5t19 45.5t45.5 19t45.5 -19t19 -45.5t-19 -45t-45 -19.5z" /></svg></a>
+            </li>
+          {{ end }}
 
         {{- if .Site.Params.EnableGlobalLanguageMenu }}
         <div class="submenu">
