@@ -1,0 +1,17 @@
+name = "hi-there"
+license = "MIT"
+licenselink = "https://github.com/pftnhr/hugo-theme-hi-there/blob/master/LICENSE.md"
+description = "A simple theme for Hugo. That's it."
+tags = ["blog", "clean", "customizable", "dark", "highlighting", "light", "minimal", "monochromatic", "multilingual", "personal", "responsive", "simple", "technical"]
+features = ["blog", "shortcode", "syntax highlighting"]
+min_version = 0.30
+
+[author]
+  name = "Robert Pfotenhauer"
+  homepage = "https://pftnhr.xyz"
+  bluesky = "http://bsky.app/profile/pftnhr.blue"
+
+[original]
+  name = "hello-friend"
+  homepage = "https://github.com/rhazdon/hugo-theme-hello-friend-ng"
+  repo = "https://github.com/rhazdon/hugo-theme-hello-friend-ng"
